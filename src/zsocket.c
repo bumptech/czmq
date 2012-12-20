@@ -143,6 +143,12 @@ zsocket_type_str (void *socket)
         return type_name [type];
 }
 
+int
+zsocket_destroy_identity(void *socket, const unsigned char *identity)
+{
+    return zmq_destroy_identity(socket, identity);
+}
+
 
 //  --------------------------------------------------------------------------
 //  Selftest

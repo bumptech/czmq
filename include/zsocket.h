@@ -65,6 +65,10 @@ int
 char *
     zsocket_type_str (void *socket);
 
+//  Removes an identity that's been associated with this socket
+int
+    zsocket_destroy_identity(void *socket, const unsigned char *identity);
+
 //  Self test of this class
 int
     zsocket_test (Bool verbose);
